@@ -1,0 +1,30 @@
+* {
+	font-family: "Arial, Helvetica, sans-serif";
+	font-size: 14pt;	
+}
+
+h1 {
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+
+table {
+	padding: 50px;
+	border: 2px solid #e6e6e6;
+	margin: 0 auto;
+	border-radius: 25px;
+	background: #EBF5FF;
+}
+
+tr td {
+	padding: 4px;
+	/*border: 1px solid gray;*/
+}
+
+#ficha {
+	border: 2px solid #e6e6e6;
+	border-radius: 25px;
+	padding: 20px;
+	background: #EBF5FF;
+}

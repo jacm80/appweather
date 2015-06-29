@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Aplicacion para el pronostico del tiempo</title>
+	<link rel="stylesheet" media="screen" type="text/css" href="/css/main.css" />
+</head>
+	<body>
+		<br>
+		<table id="ficha">
+			<tr>
+				<td colspan="2" style="text-align:center;font-weight:bold;"><%= @ciudad %></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:center;"><%= @fecha %></td>
+			</tr>
+			<tr>
+				<td>Clima</td>
+				<td>
+					<%= @clima_main %> : <%= @clima_descripcion %>
+					<img src="http://openweathermap.org/img/w/<%= @img %>"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Temperatura</td>
+				<td><%= @temperatura %> °C</td>
+			</tr>
+			<tr>
+				<td>Humedad</td>
+				<td><%= @humedad %> %</td>
+			</tr>
+			<tr>
+				<td>Temperatura Minima</td>
+				<td><%= @temp_min %> °C</td>
+			</tr>
+			<tr>
+				<td>Temperatura Maxima</td>
+				<td><%= @temp_max %> °C</td>
+			</tr>
+			<tr>
+				<td>Viento</td>
+				<td><%= @viento %></td>
+			</tr>
+		</table>
+	</body>
+</html>

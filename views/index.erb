@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Aplicacion para el pronostico del tiempo</title>
+	<link rel="stylesheet" media="screen" type="text/css" href="/css/main.css" />
+	<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#btnAceptar').click(function(){
+				if($('#sCiudad').val()=='vacio'){
+					alert('Por favor, seleccione una opcion!');
+				}
+				else {
+					$('#frmWeather').submit();
+				}
+			});
+		});
+	</script>
+</head>
+	<body>
+		<h1>Pronostico del tiempo</h1>
+		<br>
+		<form name="frmWeather" id="frmWeather" method="post" action="pronostico">
+			<table>
+				<tr>
+					<td>Ciudad</td>
+					<td>
+						<select name="ciudad" id="sCiudad">
+							<option value="vacio">Seleccione</option>
+							<% @ciudades.each do |c|  %>
+								<option value="<%= c %>"><%= c %></option>
+							<% end %>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="margin: 0px auto; text-align: center "><button name="btnAceptar" id="btnAceptar" type="button">Aceptar</button></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
