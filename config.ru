@@ -10,8 +10,6 @@ require 'json'
 
 require 'rest-client'
 
-require "app"
-
 set :run, false
 
 set :raise_errors, true
